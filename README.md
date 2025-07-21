@@ -29,7 +29,7 @@ QMT DAT数据解析脚本
 ### 1. 解析单个股票文件
 
 ```python
-from dat_parser_final import parse_single_stock
+from dat_parser_qmt import parse_single_stock
 
 # 解析单个DAT文件
 df = parse_single_stock('data/szdayK/000001.DAT', 'output/000001.csv')
@@ -39,7 +39,7 @@ print(f"解析了 {len(df)} 条记录")
 ### 2. 使用解析器类
 
 ```python
-from data_parser_final import DATParser
+from data_parser_qmt import DATParser
 
 parser = DATParser()
 
@@ -53,7 +53,7 @@ all_df = parser.parse_directory('data/szdayK', 'output')
 ### 3. 批量解析所有股票
 
 ```python
-from dat_parser_final import parse_all_stocks
+from dat_parser_qmt import parse_all_stocks
 
 # 解析所有股票数据
 parse_all_stocks('data', 'output')
